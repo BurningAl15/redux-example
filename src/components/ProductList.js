@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Glyphicon } from 'react-bootstrap';
+import store from '../redux/store';
+import { addToCart } from '../redux/actionCreator';
+
 
 const styles = {
   products: {
@@ -47,7 +50,7 @@ class ProductList extends Component {
   }
 
   addToCart(product) {
-
+    store.dispatch(addToCart(product));
   }
 }
 
